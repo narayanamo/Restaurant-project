@@ -1,0 +1,19 @@
+
+<div>
+    
+    <h2>Menu</h2>
+    <p>{{name}}</p>
+
+
+
+
+
+
+ Filter: <input type="text" ng-model="foodFilter"/>
+<div>
+    <ol>
+<li ng-repeat="item in itemdata | filter:foodFilter | orderBy:'name'"/>
+    {{item.name | uppercase}} - {{item.price | currency}}</li>
+    </ol>
+</div>
+</div>
